@@ -1,0 +1,80 @@
+@import url(./reset.css);
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+*{
+    font-family: 'Press Start 2P', sans-serif;
+    color: #ffffff;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../imgs/wall.png);
+}
+
+.menu{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    gap: 12rem;
+    height: 15vh;
+    background-color: #000000;
+    border-bottom: 5px solid #ffd700;
+}
+
+.menu>.time, .score, .lives{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.lives{
+    display: flex;
+    flex-direction: row;
+}
+
+.menu>.time>h2{
+    color: #0000ff;
+}
+
+.menu>.score>h2{
+    color: #008000;
+}
+
+.menu>.lives>h2{    
+    color: #ff0000; 
+}
+
+.menu>.time>p, .menu>.score>p, .menu>.lives>p{
+    font-size: 20px;
+}
+
+.menu>.lives>img{
+    width: 60px;
+}
+
+.panel{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.square{
+    width: 200px;
+    height: 200px;
+    border: 1px solid rgb(17, 17, 17);
+    background-color: #3b75c0;
+}
+
+.enemy{
+    background-image: url(../imgs/ralph.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}

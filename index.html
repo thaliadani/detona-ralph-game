@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/imgs/favicon.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Detona Ralph</title>
+</head>
+<body>
+    <main class="container">
+        <nav class="menu">
+            <section class="time">
+                <h2>Your Time</h2>
+                <p id="time-left">0</p>
+            </section>
+            
+            <section class="score">
+                <h2>Your Score</h2>
+                <p id="score-right">0</p>
+            </section>
+            
+            <section class="lives">
+                <img src="./assets/imgs/player.png" alt="foto do jogador">
+                <p id="lives-left">x3</p>
+            </section>
+        </nav>
+
+        <section class="panel">
+            <div class="panel-row">
+                <div class="square enemy" id="1"></div>
+                <div class="square" id="2"></div>
+                <div class="square" id="3"></div>
+            </div>
+
+            <div class="panel-row">
+                <div class="square" id="7"></div>
+                <div class="square" id="8"></div>
+                <div class="square" id="9"></div>
+            </div>
+
+            <div class="panel-row">
+                <div class="square" id="7"></div>
+                <div class="square" id="8"></div>
+                <div class="square" id="9"></div>
+            </div>
+        </section>
+    </main>
+
+    <script defer src="./assets/js/engine.js"></script>
+</body>
+</html>
