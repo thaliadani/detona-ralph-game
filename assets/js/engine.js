@@ -24,16 +24,10 @@ function countDown(){
     state.view.time.textContent = state.values.currentTime;
 
     if(state.values.currentTime <= 0){
-        if (state.values.livesCount > 0) {
-            state.values.livesCount--;
-            state.view.lives.textContent = 'x' + state.values.livesCount;
-            state.values.currentTime = 60; 
-        } else {
-            clearInterval(state.actions.countDownTimerId);
-            clearInterval(state.actions.timerId);
-            alert('Game Over! O seu resultado foi: ' + state.values.result);
-            location.reload();
-        }
+        clearInterval(state.actions.countDownTimerId);
+        clearInterval(state.actions.timerId);
+        alert('Game Over! O seu resultado foi: ' + state.values.result);
+        location.reload();
     }
 }
 
@@ -63,14 +57,23 @@ function addListerHitBox(){
                 state.values.hitPosition = null;
                 playSound('hit');
                 
-            }else {
-                state.values.result--;
-                state.view.score.textContent = state.values.result;
-                state.values.hitPosition = null;
-            };
-        });
-    });
+            } else {
+                state.values.livesCount--;
+                state.view.lives.textContent = 'x' + state.values.livesCount;
+                if(state.values.livesCount <= 0){
+                    clearInterval(state.actions.countDownTimerId);
+                    clearInterval(state.actions.timerId);
+                    alert('Game Over! O seu resultado foi: ' + state.values.result);
+                    location.reload();
+                }
+                playSound('error');
+            }
+        })
+    })
 }
+
+
+
 
 function init(){
     addListerHitBox();
